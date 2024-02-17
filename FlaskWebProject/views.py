@@ -113,13 +113,13 @@ def logout():
     return redirect(url_for('login'))
 
 def _load_cache():
-    # TODO: Load the cache from `msal`, if it exists
-    cache = None
-    return cache
+    if 'token_cache' in session:
+        return msal.SerializableTokenCache.deserialize(session['token_cache'])
+    return msal.SerializableTokenCache()
 
 def _save_cache(cache):
-    # TODO: Save the cache, if it has changed
-    pass
+    if cache.has_state_changed:
+        session['token_cache'] = cache.serialize()
 
 def _build_msal_app(cache=None, authority=None):
     return msal.ConfidentialClientApplication(
