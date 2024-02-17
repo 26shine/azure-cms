@@ -6,11 +6,11 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or '3653685a-4a43-4f3f-a574-b8c92c49ad0f'
 
     BLOB_ACCOUNT = os.environ.get('BLOB_ACCOUNT') or 'tienvqcms'
-    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'BYpPyCobTX4uhvodcNNecJNNdtAGHDYx/M3dPhIeEhyQe5xdbPoMd2lYwL6/EC9tko/sBnCHBBgo+AStVVu9AQ=='
+    BLOB_STORAGE_KEY = os.environ.get('BLOB_STORAGE_KEY') or 'YAJqdUP/ntqcsRoSElooia94ZD57LAJrIx2HEiIYuXCjo0NVVJHurS1vs6PBuizZEqQ9kO8susMt+AStBLiPDQ=='
     BLOB_CONTAINER = os.environ.get('BLOB_CONTAINER') or 'images'
 
     SQL_SERVER = os.environ.get('SQL_SERVER') or 'tien-cms.database.windows.net'
-    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'cms-tienvq'
+    SQL_DATABASE = os.environ.get('SQL_DATABASE') or 'cms-database'
     SQL_USER_NAME = os.environ.get('SQL_USER_NAME') or 'cms'
     SQL_PASSWORD = os.environ.get('SQL_PASSWORD') or 'P@ssw0rd@123'
     # Below URI may need some adjustments for driver version, based on your OS, if running locally
@@ -19,7 +19,8 @@ class Config(object):
 
     ### Info for MS Authentication ###
     ### As adapted from: https://github.com/Azure-Samples/ms-identity-python-webapp ###
-    CLIENT_SECRET = "_mx8Q~RSD0X4enzY~mXpjoq9wMeg92sjZqfCLdkX"
+    CLIENT_SECRET = "ycq8Q~uiKGY5aqp1vY_WHhxGZ7elOUObB9U-Absq"
+    # 43388321-2557-4ee2-a76b-11cfa0081b7b
     # In your production app, Microsoft recommends you to use other ways to store your secret,
     # such as KeyVault, or environment variable as described in Flask's documentation here:
     # https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables
@@ -30,7 +31,7 @@ class Config(object):
     AUTHORITY = "https://login.microsoftonline.com/common"  # For multi-tenant app, else put tenant name
     # AUTHORITY = "https://login.microsoftonline.com/Enter_the_Tenant_Name_Here"
 
-    CLIENT_ID = "34d568da-3959-4636-9133-d3bd095a171d"
+    CLIENT_ID = "ee465961-0084-4dd0-896c-99edd7c82b20"
 # 614494b9-97c3-4fd7-959c-8a37e1585113
     REDIRECT_PATH = "/getAToken"  # Used to form an absolute URL; must match to app's redirect_uri set in AAD
 
